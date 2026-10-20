@@ -16,5 +16,10 @@ class Book(db.Model):
     author = db.Column(String(255), 
                        nullable=False)
     description = db.Column(Text, 
-                            nullable=True)
+                            nullable=False)
+    is_finished = db.Column(db.Boolean, 
+                            default=False)
+    created_at = db.Column(db.DateTime, 
+                           default=db.func.current_timestamp())
+    
 
