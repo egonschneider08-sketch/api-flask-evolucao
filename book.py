@@ -23,3 +23,12 @@ class Book(db.Model):
                            default=db.func.current_timestamp())
     
 
+    def as_dict(self):
+            return {
+                'id': str(self.id),
+                'title': self.title,
+                'author': self.author,
+                'description': self.description,
+                'is_finished': self.is_finished,
+                'created_at': self.created_at.isoformat()
+             }
