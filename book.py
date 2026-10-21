@@ -32,3 +32,4 @@ class Book(db.Model):
                 'is_finished': self.is_finished,
                 'created_at': self.created_at.isoformat()
              }
+    
