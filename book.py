@@ -24,12 +24,16 @@ class Book(db.Model):
     
 
     def as_dict(self):
-            return {
-                'id': str(self.id),
-                'title': self.title,
-                'author': self.author,
-                'description': self.description,
-                'is_finished': self.is_finished,
-                'created_at': self.created_at.isoformat()
-             }
-    
+        return {
+            'id': str(self.id),
+            'title': self.title,
+            'author': self.author,
+            'description': self.description,
+            'is_finished': self.is_finished,
+            'created_at': self.created_at.isoformat() if self.created_at else None
+        }
+
+    to_dict = as_dict
+
+    def __repr__(self):
+        return f'<Book {self.title}>'
