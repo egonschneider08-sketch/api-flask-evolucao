@@ -1,0 +1,34 @@
+# Ambientes virtuais
+.venv/
+venv/
+ENV/
+env/
+
+# Python cache e arquivos compilados
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Variaveis de ambiente sensiveis (use .env.example como modelo)
+.env
+
+# Bancos de dados locais SQLite / temporarios
+*.sqlite3
+*.db
+
+# Docker / volumes locais
+postgres_data/
+
+# Logs e relatorios
+*.log
+
+# IDEs e editores
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
+
